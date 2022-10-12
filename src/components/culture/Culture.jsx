@@ -17,7 +17,7 @@ const Culture = () => {
     centerPadding: "0",
     slidesToShow: 2,
     speed: 500,
-    rows: 16,
+    rows: 8,
     slidesPerRow: 1,
     responsive: [
       {
@@ -25,7 +25,7 @@ const Culture = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          rows: 16,
+          rows: 8,
         },
       },
     ],
@@ -40,13 +40,13 @@ const Culture = () => {
           <Slider {...settings}>
             {culture.map((val) => {
               return (
-                <div className='items'>
+                <div className='items' key={val.id}>
                   <div className='box shadow'>
                     <div className='images row'>
                       <div className='img'>
                         <img src={val.cover} alt='' />
                       </div>
-                      <div class='category category1'>
+                      <div className='category category1'>
                         <span>{val.catgeory}</span>
                       </div>
                     </div>
@@ -59,7 +59,7 @@ const Culture = () => {
                         <label>{val.date}</label>
                       </div>
                       <div className='comment'>
-                        <i class='fas fa-comments'></i>
+                        <i className='fas fa-comments'></i>
                         <label>{val.comments}</label>
                       </div>
                     </div>

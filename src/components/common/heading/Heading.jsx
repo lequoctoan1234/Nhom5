@@ -1,10 +1,10 @@
 import React from "react"
 import "./heading.css"
 
-const Heading = ({ title }) => {
+const Heading = ({ id, title }) => {
   return (
     <>
-      <div className='heading'>
+      <div className='heading' key={id}>
         <h6>{title}</h6>
       </div>
     </>

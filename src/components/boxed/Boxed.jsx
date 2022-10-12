@@ -17,7 +17,7 @@ const Boxed = () => {
     centerPadding: "0",
     slidesToShow: 2,
     speed: 500,
-    rows: 16,
+    rows: 8,
     slidesPerRow: 1,
     responsive: [
       {
@@ -25,7 +25,7 @@ const Boxed = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          rows: 16,
+          rows: 8,
         },
       },
     ],
@@ -40,7 +40,7 @@ const Boxed = () => {
           <Slider {...settings}>
             {boxed.map((val) => {
               return (
-                <div className='items'>
+                <div className='items' key={boxed.id}>
                   <div className='box shadow'>
                     <div className='images row'>
                       <div className='img'>
@@ -55,11 +55,11 @@ const Boxed = () => {
                       <h1 className='title'>{val.title.slice(0, 40)}...</h1>
                       </Link>
                       <div className='date'>
-                        <i class='fas fa-calendar-days'></i>
+                        <i className='fas fa-calendar-days'></i>
                         <label>{val.date}</label>
                       </div>
                       <div className='comment'>
-                        <i class='fas fa-comments'></i>
+                        <i className='fas fa-comments'></i>
                         <label>{val.comments}</label>
                       </div>
                     </div>

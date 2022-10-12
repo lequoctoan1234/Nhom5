@@ -2,6 +2,9 @@ import React, { useState } from "react"
 import Head from "./Head"
 import "./header.css"
 import { Link } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCircleXmark } from "@fortawesome/free-regular-svg-icons"
+import { faMagicWandSparkles, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false)
@@ -10,7 +13,7 @@ const Header = () => {
     <>
       <Head />
       <header>
-        <div className='container paddingSmall'>
+        <div className="container-paddingSmall">
           <nav>
             <ul className={navbar ? "navbar" : "flex"} onClick={() => setNavbar(false)}>
               <li>
@@ -39,6 +42,16 @@ const Header = () => {
               {navbar ? <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}
             </button>
           </nav>
+          <div className="Search">
+            <input placeholder= "Search" spellCheck={false}>
+            </input>
+               {/* <button className="clear">
+                <FontAwesomeIcon icon={faCircleXmark} />
+               </button> */}
+               <button className="search-btn">
+               <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </button>
+        </div>
         </div>
       </header>
     </>

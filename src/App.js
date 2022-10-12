@@ -15,7 +15,8 @@ import NewsPage from "./components/singlePage/NewsPage"
 
 
 const App = () => {
-    return ( < >
+    return ( <
+        >
         <
         Router >
         <
@@ -25,7 +26,7 @@ const App = () => {
         <
         Route exact path = '/'
         component = { Homepages }
-        />  <
+        />   <
         Route path = '/singlepage/:id'
         exact component = { SinglePage }
         /> <
@@ -40,17 +41,18 @@ const App = () => {
         /> <
         Route exact path = '/memes'
         component = { Memes }
-        /> <
+        />  <
         Route exact path = '/politycs'
         component = { Politycs }
-        /> <
+        />  <
         Route exact path = '/sports'
         component = { Sports }
         /> <
         Route exact path = '/reviews'
         component = { Reviews }
-        /> <
-        /Switch> <Footer / >
+        />  <
+        /Switch>  <
+        Footer / >
         <
         /Router> <
         />

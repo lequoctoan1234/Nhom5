@@ -1,6 +1,5 @@
 import React from "react"
 import "./footer.css"
-import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -9,9 +8,9 @@ const Footer = () => {
         <div className='container'>
           <div className='box logo'>
             <img src='../images/tech-logo-footer.png' alt='' />
-            <p>Busan is an amazing magazine Blogger theme that is easy to customize for your needs</p>
+            <p></p>
             <i className='fa fa-envelope'></i>
-            <span> hello@beautiful.com </span> <br />
+            <span> noname2k2123@@gmail.com </span> <br />
             <i className='fa fa-headphones'></i>
             <span> +91 60521488</span>
           </div>
@@ -41,24 +40,24 @@ const Footer = () => {
             <h3>LABELS</h3>
             <ul>
               <li>
-                <Link to = '/culture'>
+                <a href="/culture">
                 <span>Culture</span> 
-                </Link>
+                </a>
               </li>
               <li>
-              <Link to = '/politycs'>
+              <a href= '/politycs'>
                 <span>politycs</span>
-                </Link>
+                </a>
               </li>
               <li>
-              <Link to = '/memes'>
+              <a href= '/memes'>
                 <span>Memes</span>
-                </Link>
+                </a>
               </li>
               <li>
-              <Link to = '/sports'>
+              <a href= '/sports'>
                 <span>Sports</span>
-                </Link>
+                </a>
               </li>
               <li>
                 <span></span>
@@ -69,7 +68,7 @@ const Footer = () => {
       </footer>
       <div className='legal  '>
         <div className='container flexSB'>
-          <p>Nhom5</p>
+          <p>Nhom1</p>
           <p>
              <i className='fa fa-heart'></i> Lê Quóc Toản - Trịnh Thị Trường - Vũ Minh Quân
           </p>

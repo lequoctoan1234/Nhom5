@@ -3,8 +3,8 @@ import "./side.css"
 import Slider from "react-slick"
 import Heading from "../../../common/heading/Heading"
 import { gallery } from "../../../../dummyData"
-import Tpost from "../Tpost/Tpost"
 import SocialMedia from "../social/SocialMedia"
+import { Link } from "react-router-dom"
 
 //const allCat = [...new Set(popular.map((curEle) => curEle.catgeory))]
 //console.log(allCat)
@@ -18,7 +18,7 @@ const Side = () => {
     slidesToScroll: 1,
   }
 
-  const catgeory = ["world", "travel", "sport", "fun", "health", "fashion", "business", "technology"]
+  const catgeory = ["Culture", "politycs", "Memes", "Sports", "Boxed", "Reviews"]
   return (
     <>
       <Heading title='Stay Connected' />
@@ -39,16 +39,17 @@ const Side = () => {
       <section className='banner'>
         <img src='./images/sidebar-banner-new.jpg' alt='' />
       </section>
-
-      <Tpost />
-
       <section className='catgorys'>
         <Heading title='Catgeorys' />
         {/*<div className='items'>{allCat}</div>*/}
         {catgeory.map((val) => {
           return (
-            <div className='category category1'>
-              <span>{val}</span>
+            <div className='category category1' key={val.id}>
+              <span>
+                <Link to = {`/${val}`}>
+                {val}
+                </Link>
+                </span>
             </div>
           )
         })}
@@ -59,7 +60,7 @@ const Side = () => {
         <Slider {...settings}>
           {gallery.map((val) => {
             return (
-              <div className='img'>
+              <div className='img'key={val.id}>
                 <img src={val.cover} alt='' />
               </div>
             )

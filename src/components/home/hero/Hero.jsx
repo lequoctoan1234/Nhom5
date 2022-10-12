@@ -13,7 +13,7 @@ const Hero = () => {
           {items.map((item) => {
             return (
               <>
-                <Card key={item.id} item={item} />
+                <Card key={setIems.id} item={item} />
               </>
             )
           })}
